@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle de Proyecto</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        // Simulación de carga de proyecto para ilustrar
+        function cargarProyecto(id) {
+            // Aquí vendría el código para cargar los datos desde el backend
+            const proyecto = {
+                id: id,
+                nombre: "Proyecto A",
+                descripcion: "Descripción del Proyecto A"
+            };
+            document.getElementById("proyectoId").value = proyecto.id;
+            document.getElementById("nombre").value = proyecto.nombre;
+            document.getElementById("descripcion").value = proyecto.descripcion;
+        }
+
+        // Simulación de función para gestionar la actualización del proyecto
+        function actualizarProyecto() {
+            alert("Proyecto actualizado correctamente.");
+            // Aquí se enviaría la actualización al backend
+        }
+
+        // Simulación de función para gestionar la eliminación (cambio de estado) del proyecto
+        function eliminarProyecto() {
+            const confirmacion = confirm("¿Estás seguro de marcar este proyecto como inactivo?");
+            if (confirmacion) {
+                alert("Proyecto marcado como inactivo.");
+                // Aquí se realizaría el cambio de estado en el backend
+            }
+        }
+    </script>
+</head>
+<body onload="cargarProyecto(1)">
+    <header>
+        <h1>Gestión del Proyecto</h1>
+        <nav>
+            <ul>
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Información del Proyecto</h2>
+        <form onsubmit="event.preventDefault(); actualizarProyecto();">
+            <input type="hidden" id="proyectoId" name="proyectoId">
+
+            <label for="nombre">Nombre del Proyecto:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="descripcion">Descripción:</label>
+            <textarea id="descripcion" name="descripcion" required></textarea>
+
+            <button type="submit">Actualizar Proyecto</button>
+            <button type="button" onclick="eliminarProyecto()">Marcar como Inactivo</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Tu Compañía. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
