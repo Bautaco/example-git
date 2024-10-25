@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Proyectos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Proyectos Disponibles</h1>
+        <nav>
+            <ul>
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Selecciona un Proyecto para Gestionar</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Supongamos que se cargan proyectos activos dinámicamente -->
+                <tr>
+                    <td>1</td>
+                    <td>Proyecto A</td>
+                    <td>Descripción del Proyecto A</td>
+                    <td>
+                        <button onclick="window.location.href='proyecto_detalle.html?id=1'">Gestionar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Proyecto B</td>
+                    <td>Descripción del Proyecto B</td>
+                    <td>
+                        <button onclick="window.location.href='proyecto_detalle.html?id=2'">Gestionar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Tu Compañía. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
